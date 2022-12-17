@@ -32,6 +32,7 @@ in project terminal
 2.  After success, run
 
 > php artisan serve
+
 to run laravel server
 
 3.  Go to local browser and enter existing account
