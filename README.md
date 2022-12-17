@@ -13,7 +13,7 @@
   Password: admin123
 - User:
   Email: user@gmail.com
-  Password: user123
+  Password: user1234
 
 **Note:** You can create the user account in route "/register" but can't create admin account.
 
