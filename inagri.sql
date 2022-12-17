@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost:3306
--- Generation Time: Dec 16, 2022 at 05:58 PM
+-- Generation Time: Dec 17, 2022 at 01:31 AM
 -- Server version: 5.7.33
 -- PHP Version: 8.1.8
 
@@ -205,6 +205,14 @@ CREATE TABLE `role_user` (
   `user_type` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
+--
+-- Dumping data for table `role_user`
+--
+
+INSERT INTO `role_user` (`role_id`, `user_id`, `user_type`) VALUES
+(1, 1, 'App\\Models\\User'),
+(2, 2, 'App\\Models\\User');
+
 -- --------------------------------------------------------
 
 --
@@ -224,6 +232,14 @@ CREATE TABLE `users` (
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+--
+-- Dumping data for table `users`
+--
+
+INSERT INTO `users` (`id`, `avatar`, `name`, `email`, `email_verified_at`, `password`, `username`, `phone_number`, `remember_token`, `created_at`, `updated_at`) VALUES
+(1, NULL, 'Admin INAGRI', 'admin@gmail.com', NULL, '$2y$10$NtkwLRVotQzVDv9IL5BDX.QxYj.MEAXod9q.EzJ3CIQ0JU9Ecj7D2', NULL, NULL, NULL, '2022-12-17 01:29:29', '2022-12-17 01:29:29'),
+(2, NULL, 'User INAGRI', 'user@gmail.com', NULL, '$2y$10$AIZWuuB55TA2aOkp9EZndusOA.VwfgkjWL8nDGttmx6ZuwL4ohKEC', NULL, NULL, NULL, '2022-12-17 01:30:34', '2022-12-17 01:30:34');
 
 --
 -- Indexes for dumped tables
@@ -336,7 +352,7 @@ ALTER TABLE `roles`
 -- AUTO_INCREMENT for table `users`
 --
 ALTER TABLE `users`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- Constraints for dumped tables
